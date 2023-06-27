@@ -41,11 +41,6 @@ export class UserRepositoryPrisma implements UserRepository {
 
     return user;
   }
-  ThreatX
-Danilo Godoy Avilez14:56
-danilo.avilez@clear.sale
-Victor Geraldo Doi14:56
-victor.doi@clear.sale
 }
 export { UserRepository };
 
