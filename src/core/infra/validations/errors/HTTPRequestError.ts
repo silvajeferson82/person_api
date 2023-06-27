@@ -6,7 +6,6 @@ export class HTTPRequestError extends Error implements IRequestError {
   public static readonly PARAM         = "HTTPRequestError"
   public static readonly TAXPAYER      = "InvalidTaxpayerError"
   public static readonly MISSING_PARAM = "MissingParamError"
-  public static readonly PAYMENT_TYPE  = "PaymentTypeError"
   public static readonly FIELD_EXISTS  = "FieldExistError"
   public static readonly CLIENT_ERROR  = "ClientError"
   public static readonly NOT_CHANGE    = "NotChangeError"
@@ -31,14 +30,12 @@ export class HTTPRequestError extends Error implements IRequestError {
       InvalidEmailError: `The email '${param}' is invalid.`,
       InvalidTaxpayerError: `The CPF '${param}' is invalid.`,
       MissingParamError: `The '${param}' parameter is missing in request body.`,
-      PaymentTypeError: `So far, we are only accepting payment by bank_slip and pix.`,
       FieldExistError: `The value '${param}' is already registered.`,
       NotFound: `No record found for ${param}`,
       NotChangeError: `It is not allowed to edit this parameter: ${param}`,
       ClientError: param,
       InvalidCardParams: `The card params are invalid `,
       Fail: `fail`,
-      duplicate: `Not valid for duplicate transaction`,
       generic: 'Internal error',
       access_danied: `Invalid email or password`,
       valid_password: "password cannot have space or length less than 6 characters",
