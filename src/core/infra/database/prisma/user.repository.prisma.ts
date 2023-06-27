@@ -18,7 +18,6 @@ export class UserRepositoryPrisma implements UserRepository {
   }
   
   async create(data: IRequestUser): Promise<UserEntity> {
-    console.log(data)
     const user = await prisma.user.create({
       data: { ...data },
     });
@@ -26,7 +25,7 @@ export class UserRepositoryPrisma implements UserRepository {
     return user;
   }
 
-  async update(id: string, data: UserEntity): Promise<UserEntity> {
+  async update(id: string, data: IRequestUser): Promise<UserEntity> {
     const user = await prisma.user.update({
       where: { id },
       data,
@@ -42,7 +41,11 @@ export class UserRepositoryPrisma implements UserRepository {
 
     return user;
   }
-  
+  ThreatX
+Danilo Godoy Avilez14:56
+danilo.avilez@clear.sale
+Victor Geraldo Doi14:56
+victor.doi@clear.sale
 }
 export { UserRepository };
 

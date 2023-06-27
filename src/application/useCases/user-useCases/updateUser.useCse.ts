@@ -11,11 +11,10 @@ export class UpdateUserUseCase implements IUseCase {
     private readonly userRepository: UserRepository
   ) { }
   
-  public execute = async ({id, user}: HTTPRequestObject): Promise<UserEntity | Error> => {
-    
+  public execute = async (update: HTTPRequestObject): Promise<UserEntity | Error> => {
+    const { id, user } = update
     const userExists = await this.userRepository.findById(id);
-    console.log('useCase',userExists)
-    
+
     if (!userExists) {
       return new HTTPRequestError(HTTPRequestError.NOT_FOUND, id)
     }

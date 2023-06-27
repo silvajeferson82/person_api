@@ -7,7 +7,7 @@ export class UpdateUserController implements Controller {
   constructor(private readonly updateUser: IUseCase) {}
 
   async handle({id, user}:HTTPRequestObject): Promise<HttpResponse> {
-    console.log({'aqui..':user})
+    
     const users: any = await this.updateUser.execute({id, user});
     if (users instanceof HTTPRequestError) {
       return notFound(users);

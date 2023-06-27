@@ -2,7 +2,7 @@ import { HTTPRequestError } from './errors/HTTPRequestError'
 
 export class RequiredFieldsValidator<T = any> {
   public validate(data: T) {
-    console.log('validate',data)
+    // console.log('validate',data)
     const fields = Object.getOwnPropertyNames(data)
     for (const field of fields) {
       if (

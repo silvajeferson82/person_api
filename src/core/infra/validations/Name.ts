@@ -25,7 +25,7 @@ export class Name {
   }
 
   static create(name: string): Name | HTTPRequestError {
-    console.log(name)
+    // console.log(name)
     if (!this.validate(name)) {
       return new HTTPRequestError(HTTPRequestError.NAME, name)
     }

@@ -7,8 +7,6 @@ export class CreateUsersController implements Controller {
   constructor(private readonly createUser: IUseCase) {}
 
   async handle({user}: HTTPRequestObject): Promise<HttpResponse> {
-    console.log('ENTRADA',user)
- 
     const createdUser = await this.createUser.execute(user);
 
     if (createdUser instanceof HTTPRequestError) {

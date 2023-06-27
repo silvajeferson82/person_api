@@ -39,7 +39,7 @@ export class UserValidator {
       return createTaxpayer
     }
 
-    let createPassword = Password.create(user.password || user.password_confirmation)
+    let createPassword = Password.create(user.password)
     if (createPassword instanceof HTTPRequestError) {
       return createPassword
     }

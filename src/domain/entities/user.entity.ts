@@ -28,6 +28,6 @@ export class UserEntity implements IUser {
   password: string;
   password_confirmation?: string;
   role: string;
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt?: Date | undefined;
+  updatedAt?: Date | undefined;
 }

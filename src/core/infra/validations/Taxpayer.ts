@@ -14,7 +14,7 @@ export class Taxpayer {
 
   private static validateCPF(taxpayerId: string): boolean {
     taxpayerId = taxpayerId.replace(/[^\d]+/g, '')
-    console.log(taxpayerId)
+    // console.log(taxpayerId)
     if(taxpayerId == '') return false;
 
     if (taxpayerId.length != 11 ||

@@ -1,4 +1,4 @@
-namespace NodeJS {
+declare namespace NodeJS {
   interface ProcessEnv {
     PORT: int;
   }
@@ -25,7 +25,7 @@ declare interface IRequestUser {
   role: string;
   createdAt?: Date;
   updatedAt?: Date;
-};
+}
 
 declare interface HTTPResponseObject {
   withError?: boolean
@@ -35,6 +35,6 @@ declare interface HTTPResponseObject {
 }
 
 declare interface HTTPRequestObject {
-  id?: string
-  user?: IUser
+  id: string
+  user: IRequestUser
 }

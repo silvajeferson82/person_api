@@ -21,7 +21,7 @@ export class Password {
   }
 
   static create(password: string): Password | HTTPRequestError {
-    console.log(this.validate(password))
+    // console.log(this.validate(password))
     if (!this.validate(password)) {
       return new HTTPRequestError(HTTPRequestError.VALID_PASSWORD, password)
     }
